@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.sec1{
+background: url(./imagenes/71XqdWHlE4L.jpg);
+background-position: bottom center;
+background-size: cover;
+background-attachment: fixed;
+}
+.sec2{
+background: url(./imagenes/Alice-In-Wonderland-Forest-Scenery-56117877-1.png);
+background-position: bottom center;
+background-size: cover;
+background-attachment: fixed;
+}
+.sec3{
+background: url(./imagenes/desktop-wallpaper-alice-in-wonderland-backgrounds-wonderland.jpg);
+background-position: bottom center;
+background-size: cover;
+background-attachment: fixed;
+}
+.sec4{
+background: url(./imagenes/desktop-wallpaper-gate-to-wonderland-wonderland.jpg);
+background-position: bottom center;
+background-size: cover;
+background-attachment: fixed;
+}
+
+
+main {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+section {
+    position: relative;
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    border: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+
+.contain{
+    width: 100%;
+    height: 250px;
+    background: #000000;
+    text-align: center;
+}
+
+.contain p{
+    font-size: 2rem;
+    font-family: fantasy;
+    line-height: 250px;
+}
+
+.contain {
+    position: relative;
+    z-index: 2;
+    background: rgba(173, 21, 219, 0.705);
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.cheshire {
+    position: absolute;
+    width: 150px;
+    animation: fadeInOut 5s infinite;
+}
+
+.sec1 .cheshire {
+    width: 150px;
+    top: 10%;
+    left: 10%;
+    animation: rotate 5s infinite linear, fadeInOut 5s infinite;
+}
+
+.sec2 .cheshire {
+    width: 50%;
+    height: 50%;
+    top: 20%;
+    right: 10%;
+}
+
+.sec3 .cheshire {
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+}
+
+.sec4 .cheshire {
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    right: 0%;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.animated-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    color: #f9f1ff; 
+}
+
+.contain:hover .animated-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@media screen and (min-width: 600px) {
+  .animated-text {
+    animation: slideIn 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .sec1 .animated-text { animation-delay: 3.5s; }
+  .sec2 .animated-text { animation-delay: 4.5s; }
+  .sec3 .animated-text { animation-delay: 5.5s; }
+  .sec4 .animated-text { animation-delay: 4.5s; }
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
